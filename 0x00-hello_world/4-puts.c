@@ -1,10 +1,11 @@
-#include <iostream>
+#include <stdio.h>
+/**
+*Entry point
+*/
 
-using namespace std;
-
-int main()
+int main(void)
 {
-    char alxpro [] = "Programming is like building a multilingual puzzle";
+    char alxpro [] = "\"Programming is like building a multilingual puzzle";
     puts (alxpro);
 
     return 0;
