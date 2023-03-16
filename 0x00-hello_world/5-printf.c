@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
-* main - program to print statement using printf statement
-* Return variable result for main
-* return 0;(success)
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
 */
 int main(void)
 {
