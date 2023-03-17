@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <time.h>
 /**
 * main - Entry point of the program
 *
@@ -9,7 +9,9 @@
 */
 int main(void)
 {
-int n = 0;
+int n;
+srand(time(0));
+n = rand() - RAND_MAX / 2;
 
 if (n > 0)
 {
