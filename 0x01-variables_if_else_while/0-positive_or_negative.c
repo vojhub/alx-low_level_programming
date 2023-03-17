@@ -9,13 +9,13 @@
 */
 int main(void)
 {
-int a = 0;
+int n = 0;
 
-if (a > 0)
+if (n > 0)
 {
 printf("is positive\n");
 }
-else if (a == 0)
+else if (n == 0)
 {
 printf("is zero\n");
 }
