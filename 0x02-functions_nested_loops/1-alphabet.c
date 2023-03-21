@@ -8,13 +8,14 @@
 */
 
 void print_alphabet_x10(void)
+
 {
-char letter = 'a';
-while (letter <= 'z')
+char c;
+
+for (c = 'a'; c <= 'z'; c++)
 {
-_putchar(letter);
-letter++;
+_putchar(c);
 }
 _putchar('\n');
-return (0);
 }
+
