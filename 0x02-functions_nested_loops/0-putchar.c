@@ -1,12 +1,9 @@
 #include "main.h"
-/*
-* * main - Entry point of the program
+/**
+* main - Entry point
 *
-* _putchar: Print the alphabets putchar
-*
-*return 0 (success)
+* Return: Always 0
 */
-
 int main(void)
 {
 _putchar('_');
