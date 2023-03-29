@@ -5,16 +5,26 @@
  *@src: A pointer to an char that will be updated
  *Return: dest
  */
-char *_strcat(char *dest, char *src) {
-int dest_len = strlen(dest);
-int i;
 
-for (i = 0; src[i] != '\0'; i++)
+char *_strcat(char *dest, char *src)
 {
-dest[dest_len + i] = src[i];
-}
+	int i, j;
 
-dest[dest_len + i] = '\0';
-return dest;
-}
+	i = 0;
+	while (dest[i] != '\0') /*WHILE count character */
+	{
+		i++;
+	}
 
+	j = 0;
+	while (src[j] != '\0') /*WHILE concatenate dest with src*/
+	{
+		dest[i] = src[j];
+		j++;  /*sum j*/
+		i++; /**sum i*/
+	}
+
+	dest[i] = '\0'; /*the terminating null byte*/
+
+	return (dest);
+}
