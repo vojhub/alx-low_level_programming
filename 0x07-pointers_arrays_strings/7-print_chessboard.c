@@ -1,23 +1,19 @@
 #include "main.h"
 /**
- * print_chessboard - print a chessboard.
- * @a: source matrix
- *
- *
- * Return: chessboard.
+ * print_chessboard - Entry point
+ * @a: array
+ * Return: Always 0 (Success)
  */
 void print_chessboard(char (*a)[8])
-void print_chessboard() {
-    int row, col;
+{
+	int i;
+	int j;
 
-    for (row = 0; row < 8; row++) {
-        for (col = 0; col < 8; col++) {
-            if ((row + col) % 2 == 0) {
-                _putchar("[W]");  // white square
-            } else {
-               _putchar("[B]");  // black square
-            }
-        }
-        _putchar("\n");  // move to next row
-    }
+	for (i = 0; i < 8; i++)
+	{
+		for (j = 0; j < 8; j++)
+			_putchar(a[i][j]);
+		_putchar('\n');
+	}
 }
+
