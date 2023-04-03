@@ -7,15 +7,17 @@
  * Return: chessboard.
  */
 void print_chessboard(char (*a)[8])
-{
-	int i, j;
+void print_chessboard() {
+    int row, col;
 
-	for (i = 0; i <= 7; i++)
-	{
-		for (j = 0; j <= 7; j++)
-		{
-			_putchar(a[i][j]);
-		}
-		_putchar('\n');
-	}
+    for (row = 0; row < 8; row++) {
+        for (col = 0; col < 8; col++) {
+            if ((row + col) % 2 == 0) {
+                _putchar("[W]");  // white square
+            } else {
+               _putchar("[B]");  // black square
+            }
+        }
+        _putchar("\n");  // move to next row
+    }
 }
