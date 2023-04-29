@@ -4,7 +4,7 @@
  *@head: Ponter to thehead of listint-t list
  *@n: New node integer
  *Return: If the function fails - NULL. Else - the address of the new element
- */ 
+ */
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
 listint_t *new;
