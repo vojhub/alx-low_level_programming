@@ -1,5 +1,4 @@
 #include "lists.h"
-
 /**
  * insert_nodeint_at_index - inserts a new node in a linked list
  *@head: pointer to the first node
@@ -7,33 +6,32 @@
  *@n: The integer for the new node to contain
  * Return: pointer to the new node, or NULL
  */
-listint_t *insert_namint_at_index(listint_t **head, unsigned int idx, int n)
+int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-listint_t *new, *copy = *head;
-unsigned int nam;
+listint_t *temp = *head;
+listint_t *current = NULL;
+unsigned int p = 0;
 
-new = malloc(sizeof(listint_t));
-if (new == NULL)
-return (NULL);
-new->n = n;
+if (*head == NULL)
+return (-1);
 
-if (idx == 0)
+if (index == 0)
 {
-new->next = copy;
-*head = new;
-return (new);
+*head = (*head)->next;
+free(temp);
+return (1);
+}
+while (p < index - 1)
+{
+if (!temp || !(temp->next))
+return (-1);
+temp = temp->next;
+i++;
+}
+current = temp->next;
+temp->next = current->next;
+free(current);
+
+return (1);
 }
 
-for (nam = 0; nam < (idx - 1); nam++)
-{
-if (copy == NULL || copy->next == NULL)
-return (NULL);
-
-copy = copy->next;
-}
-
-new->next = copy->next;
-copy->next = new;
-
-return (new);
-}
