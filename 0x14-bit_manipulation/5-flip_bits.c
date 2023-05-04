@@ -10,15 +10,17 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-unsigned long int x = n ^ m;
-unsigned int jou = 0;
+int i, count = 0;
+unsigned long int current;
+unsigned long int exclusive = n ^ m;
 
-while (x != 0)
+for (i = 63; i >= 0; i--)
 {
-jou++;
-x &= (x - 1);
-}
-return (jou);
+current = exclusive >> i;
+if (current & 1)
+count++;
 }
 
+return (count);
+}
 
