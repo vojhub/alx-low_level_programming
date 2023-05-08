@@ -1,4 +1,5 @@
-#include <main.h>
+#include "main.h"
+#include <stdlib.h>
 /**
 *create_file -  create file text file print to STDOUT.
 *@filename: text file being created
