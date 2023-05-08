@@ -1,10 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <fcntl.h>
-#include <unistd.h>
-#include <sys/stat.h>
-#include <sys/types.h>
 #include <main.h>
 /**
 *create_file -  create file text file print to STDOUT.
@@ -12,6 +5,8 @@
 *@text_content : pointer number of letters to be read
 * return -1 if fails return 1 success
 */
+ssize_t read_textfile(const char *filename, size_t letters)
+{
 int create_file(const char *filename, char *text_content)
 {
 if (filename == NULL)
@@ -35,4 +30,4 @@ return (-1);
 close(fd);
 return (1);
 }
-
+}
