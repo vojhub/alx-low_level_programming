@@ -18,7 +18,8 @@ if (fd == -1)
 return (-1);
 if (!text_content)
 text_content = "";
-for (nletters = 0; text_content[nletters]; nletters++);
+for (nletters = 0; text_content[nletters]; nletters++)
+;
 nhs = write(fd, text_content, nletters);
 if (nhs == -1)
 return (-1);
