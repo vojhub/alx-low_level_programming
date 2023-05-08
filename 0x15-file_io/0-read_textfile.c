@@ -1,10 +1,11 @@
 #include "main.h"
 #include <stdlib.h>
 /**
-*create_file -  create file text file print to STDOUT.
+*read_textfile - reads a text file and prints
 *@filename: text file being created
-*@text_content : pointer number of letters to be read
-* return -1 if fails return 1 success
+* @letters: numbers of letters printed
+*Return: w- actual number of bytes read and printed
+*
 */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
